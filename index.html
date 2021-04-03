@@ -1,0 +1,217 @@
+//html
+
+<!Doctype html>
+<html>
+    <head>
+        <title>Gallery </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+        <link href='https://fonts.googleapis.com/css?family=Aladin' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Black And White Picture' rel='stylesheet'>
+    </head>
+    <body>
+        <div id="loader">
+            <div class="triangle">
+                <p id="l">Loading..</p>
+            </div>
+        </div>
+        <div id="content" >
+            <div class="pmenu">
+              <a href="#bar">MENU</a>
+               <div class="dropmenu">
+                 <a href="#1">guvi</a>
+                 <a href="#2">zen</a>
+                 <a href="#3">hackerkid</a>
+              
+                
+               </div>
+            </div>
+        
+        <div class="conteiner">
+        <div id="empty"></div>
+        <h2>GUVI</h2>
+        <div class="img img1" id="1"></div>
+        <h2>Zen</h2>
+        <div class="img img2" id="2"></div>
+        <h2>Hackerkid</h2>
+        <div class="img img3" id="3"></div>
+       
+       
+         </div>
+    </body>
+</html>
+
+
+
+//css
+
+html{
+    scroll-behavior:smooth;
+}
+body{
+    background-color:white;
+    text-indent:15%;
+    margin:0;
+}
+#content{
+   display:none;
+}
+#l{
+    color:white;
+    font-size:25px;
+    font-weight:450;
+    position:relative;
+    top:25%;
+   
+}
+#loader{
+    background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #2e3192),color-stop(1, #1bffff) );
+    position:absolute;
+    top:10px;
+    right:10px;
+    bottom:10px;
+    left:10px;
+}
+.triangle{
+    height:150px;
+    width:150px;
+    border-radius:75px;
+    background-color:white;
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    margin:auto;
+    overflow:hidden;
+}
+
+.triangle:before{
+    content:"";
+    height:230px;
+    width:230px;
+    border-radius:90px;
+    background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #2e3192),color-stop(1, #1bffff) );
+    position:absolute ;
+    top: 10px ;
+    left:10px;
+    bottom:10px;
+    right:10px;
+    margin:auto;
+    animation:fill 4s infinite;
+    }
+@keyframes fill{
+
+    0%{
+        transform:translate(-22px,200px) rotate(0deg);
+    }
+    100%{
+        transform:translate(-22px,41px) rotate(275deg)
+    }
+}   
+.pmenu {
+    position: fixed;
+    background-color:#2e3192;
+    text-align:right;
+    font-size:20px;
+    width:100%;
+    box-shadow:0px 3px 3px black;
+    font-weight:500;
+    z-index:1;
+    top:0px;
+}
+.pmenu a:hover {
+    background-color:black;
+   
+}
+
+.pmenu a, .dropmenu a {
+    display: block;
+    text-decoration: none;
+    padding:15px;
+    color:white;
+   }
+.pmenu a{
+    opacity:0.9;
+}
+.dropmenu {
+    display: none;
+    position: absolute;
+    top: 55px;
+    width: 60%;
+    right:0%;
+    overflow:hidden ;
+    text-align:center;
+    background-color: black;
+    box-shadow: inset 0.5px 1px 3px 1px black;
+}
+.pmenu:hover .dropmenu {
+    display: block;
+}
+.dropmenu a:hover {
+    box-shadow: inset 0.5px 1px 3px 1px black;
+    background-color: #2e3192;
+    color:white;
+}
+.img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+    box-shadow:0px 0px 3px 3px black;
+    border-width:0px 5px 0px 5px;
+    border-color:#2e3192;
+    border-style:solid;
+}
+
+.img1 {
+    background-image: url("https://lh3.googleusercontent.com/q8ARKCbUR6du2VHg-2rP-sMLiVNjO0970VOuDeoWmJjHmQjHgncFGIjeNBMSxVs38BNBdWi8kLitoo-k_cusGI-TSlJyvdIoMl8FjXteH_JezxbVkvoER85o98ITLv0rqlbUGVhNVtSGV14ZxfAsW3gvive4bv0TalQjkaSJp2A2Vc3YKKzevJVQeLujNTFMxrhzyH5ViT-2LZhaD3voDGbxIB5NOxLeT-qSI4DNNacrs7wSe2GXUTCA649ZC3cOn5-E1ZH9YO0TzqJLzU8TKnZoby-nEdumR2VnnbOxYheE3_M3p_wuteAJuDfIuMLLd2LCuisJARYH1oSNhaNzAtEmN-GzCTEEl1Vs4VnTSPWfE-QoWEn7FXy17ypph20fPpsWQmTNARQbPsDblW7W1m4OJRGPYfQQmxjTuLrlLvKamfBLUn_jr6E-fFZlpyIHjyt5ZtmOiKrYO-0nWt0c-oSfDBoHu93sA6nzrycRCsaD8gVYkFpiVmdUvEHAT-YhO9L0gFl3LP6cGFuv2lNmSZBTNtjbUJvOcQdtIamWCZ67qx6gTJGKOvu0iaMPeQnDhR1uZ3jVwZyYNkXvSJOU_ApvpOOBHjuWC5NS6hkjh4wYCnE0Tvf1HUGRMKAnLCQVszhbNcWNSecw5Z7l4WGtb0pfAauNeiQmhx2yPik4rgS0YxU0HCPkaPIFD6Z8WDXdWo6brS8D0Kqp_LJnzCKEVes=w300-h168-no?authuser=0");
+}
+
+.img2 {
+    background-image: url("https://lh3.googleusercontent.com/1Wmj4_lOaPBHzNkdRuwTVSF2x0qWVgtLxbOs8msl40aDGhJEYLcgPzl7kN_u68S0tZ3IPEBZDufhYvflqNNRC4T1qQkvDd_cu-5JDnGPPPBbhz2te4C-TbDbN0DEcz2DiBsgAPX1JVuXKoL-ubrBz0bLzbgNmlxg_cPidhc3CUg8jVooZtdfYoffrfCmidgr0z0gK3KMqIgBSUEY52YiT6cau9aNijFFvSRqXR18B188gxtDpc9QUC6ISp2rJBq9AUXIvHcRkubxjk9IZnxacj_q-wC_MLkrNsUBnxvnzuIzsLpp2xMXiVyWYetsnwgJA3NjSuCRV498V73owMiQcAl_wJBc0XfGG6vVdyjTEmGf7j3TAnCCNJkkYBFwlN1Iha1PnLy5iwhXmvhrEvThwEg0__ahmuU2xQO-GtTrOA9qk-HsAx46UR5xsfqUz4vTjPLf_UzogR6CeKRgnAp8iJpc-oqD8hhqXuzKPtkk7Q9PMuM1Gfd3lYyrf84wezgXkA__NiQ_Polc34Ei2WxqSPWf48r8_teo-9xsAof62-U-FZP34ETdoMiKrovUy9AY_ETE2qi5kPKaSKeJjVcP7fg9bUHHgL5SIh5CeHzjGcjBNjqoXndBkoCvOxl-9yanemBASc4IuxRYl5vSJrXg5cYPmsf_4SX6Tyt06-N9WlZbZc0MeSz-qjbvV7xfufFDCq6h8vRR8gKGOxkLxCMrJL0=w1124-h843-no?authuser=0");
+}
+
+.img3 {
+    background-image:url("https://lh3.googleusercontent.com/de56ZqvY7I_ME0UOjqV08nfYQAS7uLGCsZuSUgnYkgngYu_WhOaXSLQmkmlz9RI6-i5DaFL9UFszoKJ5HgQd5oHyIcp_d-2kf9EmnWhMM3qwyT3a8vDAA36vVKaNYDDaa1Y5YqDEcq2W-7DMLtNweD8ayzlSsbpuXoF-oBNjks8XBpLkuZfKXGci-JDUVJzE7cq52tQs4GF2mp0VTUOhyLRBMqWUlC-Gph86m4huEgTq2nNvcWwUV2SKZja0Q1rk9Zv8ZUSbDOehly90yE3w2nm18v33IV2mzP_APjNBXU7FX7SLjtJE51onDevUi-3oDNMaKvb3XDt8pAhoaf_kCwrOjKYvqAh57ljvJvhCSCuPwbjW3Nj9JtYbb4TQdiLE1lzGFxtDcXJ7HysdfdfeIZyB33ys03zmR6Zt1JNeHWmE2OhH4YgEfQL6LfIsxqmkpPxIO31YQetIkzmeMVxB4dExABG_of5a22ZxJJve4PfQxnt4VYhOzSeQZ2o6GIYzN8lsvFdbkMAEMLrvd7hc_2nG85NtCktjIWzluegQWr2oNjhOciQI97r3mtSbYJRBl8I7uZhFYYOA-KE-7Xq_o4kLLi9VDpc_F2JcU0b_PFL53eig_l0RlKly3yy526SckUofEJMJqCnm00OIfNYI2jp0rkWqrS-pOSg6B1z2lLR_SjdNm46ppFYCsMUaMGhAUvFnmSwAdA1n6tJQrhqhcSw=w238-h212-no?authuser=0");
+}
+
+h2 {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align:center ;
+    background-color: white;
+    color: #2e3192;
+    height: 40px;
+    font-family: 'Aladin';
+   
+}
+#empty{
+    height:50px;
+}
+h3{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align:center ;
+    background-color:white;
+    color:black;
+    height: 40px;
+    font-family: 'Black And White Picture';
+}
+
+
+
+
+
+//js
+
+function loader() {
+var myVar = setTimeout(content,7000);
+}
+loader();
+function content()
+{
+document.getElementById("loader").style.display = "none";
+document.getElementById("content").style.display = "block";
+}
